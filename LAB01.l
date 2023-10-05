@@ -2,16 +2,11 @@
     #include <stdio.h>
     #include <stdlib.h>
     #include <string.h>
-    FILE* yyin;
     using namespace std;
 
     int errores = 0;
     int id = 1;
 %}
-
-/*OPCIONES*/
-%option c++
-%option outfile="LAB01.yy.cpp"
 
 /*TOKENS*/
 
@@ -81,29 +76,28 @@ ERROR {DIGITO}+{LETRA}+({DIGITO}|{LETRA})*|[^{NUMERO}]{PUNTO}[^{NUMERO}]
 
 /*REGLAS*/
 %%
-
-{CREATETABLE}    {printf("CREATE TABLE",yytext);}
-{DROPTABLE}      {printf("DROP TABLE",yytext);}
-{SELECT}         {printf("SELECT",yytext);}
-{WHERE}          {printf("WHERE",yytext);}
-{GROUPBY}        {printf("GROUP BY",yytext);}
-{ORDERBY}        {printf("ORDER BY",yytext);}    
-{INSERT}         {printf("INSERT",yytext);}
-{DELETE}         {printf("DELETE",yytext);}
-{UPDATE}         {printf("UPDATE",yytext);}
-{MAX}            {printf("MAX",yytext);}
-{MIN}            {printf("MIN",yytext);}
-{AVG}            {printf("AVG",yytext);}
-{COUNT}          {printf("COUNT",yytext);}
-{INTO}           {printf("INTO",yytext);}
-{VALUES}         {printf("VALUES",yytext);}
-{FROM}           {printf("FROM",yytext);}
-{SET}            {printf("SET",yytext);}
-{ASC}            {printf("ASC",yytext);}
-{DESC}           {printf("DESC",yytext);}
-{DATO_INTEGER}   {printf("INTEGER",yytext);}
-{DATO_DECIMAL}   {printf("DECIMAL",yytext);}
-{DATO_VARCHAR}   {printf("VARCHAR",yytext);}
+{CREATETABLE}    {printf("CREATE TABLE");}
+{DROPTABLE}      {printf("DROP TABLE");}
+{SELECT}         {printf("SELECT");}
+{WHERE}          {printf("WHERE");}
+{GROUPBY}        {printf("GROUP BY");}
+{ORDERBY}        {printf("ORDER BY");}    
+{INSERT}         {printf("INSERT");}
+{DELETE}         {printf("DELETE");}
+{UPDATE}         {printf("UPDATE");}
+{MAX}            {printf("MAX");}
+{MIN}            {printf("MIN");}
+{AVG}            {printf("AVG");}
+{COUNT}          {printf("COUNT");}
+{INTO}           {printf("INTO");}
+{VALUES}         {printf("VALUES");}
+{FROM}           {printf("FROM");}
+{SET}            {printf("SET");}
+{ASC}            {printf("ASC");}
+{DESC}           {printf("DESC");}
+{DATO_INTEGER}   {printf("INTEGER");}
+{DATO_DECIMAL}   {printf("DECIMAL");}
+{DATO_VARCHAR}   {printf("VARCHAR");}
 {SUMA}           {printf("suma=%s",yytext);}
 {RESTA}          {printf("resta=%s",yytext);}
 {MULT}           {printf("multiplicación=%s",yytext);}
@@ -112,8 +106,8 @@ ERROR {DIGITO}+{LETRA}+({DIGITO}|{LETRA})*|[^{NUMERO}]{PUNTO}[^{NUMERO}]
 {DIFERENCIA}     {printf("diferencia=%s",yytext);}
 {MAYORQ}         {printf("mayorq=%s",yytext);}
 {MENORQ}         {printf("menorq=%s",yytext);}
-{MAYORIQ}        {printf("mayorigualq",yytext);}
-{MENORIQ}        {printf("menorigualq",yytext);}
+{MAYORIQ}        {printf("mayorigualq");}
+{MENORIQ}        {printf("menorigualq");}
 {AND}            {printf("y=%s",yytext);}
 {OR}             {printf("o=%s",yytext);}
 {PARENTA}        {printf("parabre=%s",yytext);}
@@ -130,7 +124,6 @@ ERROR {DIGITO}+{LETRA}+({DIGITO}|{LETRA})*|[^{NUMERO}]{PUNTO}[^{NUMERO}]
 
 {ERROR}          {printf("ERROR: %s ", yytext);
                  errores++;}
-
 %%
 
 /*CODIGO*/
