@@ -1,0 +1,9 @@
+idCREATE idTable idEMPLEADOparabre=(idnombre VARCHARparabre=(entero=20parcierr=)coma=, idcédula INTEGERcoma=, idsalario
+DECIMALparabre=(entero=2parcierr=)parcierr=)puntcoma=;
+INSERT INTO idEmpleado VALUESparabre=(‘idJuan’coma=,entero=1045268154coma=, ERROR: 12aab parcierr=)puntcoma=;
+SELECT FROM idapuntcoma=;
+SELECT COUNTparabre=(parcierr=) FROM idtablapuntcoma=;
+SELECT idnombrecoma=, MAXparabre=(idsalarioparcierr=) FROM idEmpleadopuntcoma=;
+UPDATE SET idnombreasign==’idCarlos’ FROM idEmpleado WHERE idcédulaasign==decimal=12.5puntcoma=;
+SELECTasterisco= * FROM idEmpleado WHERE idsalariomenorq=<entero=2000000 ORDER BY idnombre ASCERROR:  .  puntcoma=;
+21 identificadores2 Errores léxicos
