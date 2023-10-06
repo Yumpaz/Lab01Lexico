@@ -5,4 +5,4 @@ flex -o LAB01.yy.cpp LAB01.l
 g++ -o LAB01.out LAB01.yy.cpp
 
 #running the executable
-./LAB01.out Entrada.txt > Salida.txt
+./LAB01.out entrada.txt > salida.txt
